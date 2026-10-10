@@ -1,0 +1,52 @@
+    <section id="hero" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-10 md:py-20">
+        <div class="grid grid-cols-1 lg:grid-cols-12 gap-12 items-center">
+            <div class="lg:col-span-7 space-y-6">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-black text-slate-900 dark:text-white tracking-tight leading-tight">
+                    <span class="translate-me">AI Powered</span><br>
+                    <span class="text-emerald-500 translate-me">Food Health</span><br>
+                    <span class="translate-me">Analyzer</span>
+                </h1>
+                <p class="text-base sm:text-lg text-slate-600 dark:text-slate-400 max-w-xl leading-relaxed translate-me">
+                    Understand what you eat before you buy. Instantly decode food labels, ingredient toxicity, and Nutri-Score ratings with artificial intelligence.
+                </p>
+                <div class="flex flex-wrap items-center gap-4 pt-2">
+                    <a href="products.html" class="nav-item page-transition bg-slate-950 hover:bg-slate-800 text-white font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2 shadow-lg transition">
+                        <i class="fa-solid fa-magnifying-glass text-xs"></i> <span class="translate-me">Explore Products</span> <i class="fa-solid fa-arrow-right text-xs"></i>
+                    </a>
+                    <a href="about.html" class="nav-item page-transition bg-white dark:bg-slate-900 hover:bg-slate-100 dark:hover:bg-slate-800 text-slate-800 dark:text-slate-200 border border-slate-200 dark:border-slate-800 font-semibold px-6 py-3 rounded-full text-sm flex items-center gap-2 shadow-sm transition">
+                        <i class="fa-regular fa-circle-check text-emerald-500"></i> <span class="translate-me">Learn Methodology</span>
+                    </a>
+                </div>
+                <div class="grid grid-cols-3 gap-6 pt-8 border-t border-slate-200 dark:border-slate-800 max-w-lg">
+                    <div><div class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white">355+</div><div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5 translate-me">Packaged Foods</div></div>
+                    <div><div class="text-2xl sm:text-3xl font-extrabold text-emerald-500">A to E</div><div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5 translate-me">Nutri-Score Grade</div></div>
+                    <div><div class="text-2xl sm:text-3xl font-extrabold text-emerald-500">NOVA 1-4</div><div class="text-xs text-slate-500 dark:text-slate-400 font-medium mt-0.5 translate-me">Processing Index</div></div>
+                </div>
+            </div>
+
+            <!-- Rotating Recommendation Card: picks a new random product every page load/refresh -->
+            <div class="lg:col-span-5 relative flex justify-center">
+                <div class="w-full max-w-md">
+                    <div class="text-right mb-2">
+                        <span class="text-[10px] font-bold text-emerald-600 dark:text-emerald-400 uppercase tracking-widest translate-me">Recommended for you</span>
+                    </div>
+                    <div id="recommendationCard" class="w-full bg-white dark:bg-slate-900 rounded-3xl p-6 shadow-xl border border-slate-100 dark:border-slate-800 relative z-10 min-h-[320px] flex items-center justify-center">
+                        <i class="fa-solid fa-spinner fa-spin text-slate-300 text-2xl"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="catalog" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 flex-grow w-full border-t border-slate-200/80 dark:border-slate-800">
+        <div class="flex flex-col md:flex-row md:items-end justify-between mb-8 gap-4">
+            <div>
+                <span class="text-xs font-bold text-emerald-500 uppercase tracking-widest translate-me">LIVE PACKAGED FOOD INDEX</span>
+                <h2 class="text-2xl sm:text-3xl font-extrabold text-slate-900 dark:text-white mt-1 translate-me">Explore 355 Analyzed Packaged Products</h2>
+            </div>
+            <a href="products.html" class="nav-item page-transition text-xs font-bold text-slate-600 dark:text-slate-300 hover:text-emerald-500 flex items-center gap-1 self-start md:self-auto">
+                <span class="translate-me">View All Categories</span> <i class="fa-solid fa-arrow-right text-[10px]"></i>
+            </a>
+        </div>
+        <div id="homeProductGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6"></div>
+    </section>

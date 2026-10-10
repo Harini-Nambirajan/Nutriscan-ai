@@ -1,0 +1,85 @@
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full space-y-12">
+
+        <section class="space-y-4">
+            <span class="text-xs font-bold text-emerald-500 uppercase tracking-widest translate-me">ABOUT THE PROJECT</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white translate-me">Multilingual Food Label Parsing, Banned Dye Detection &amp; AI Chat Assistant</h1>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed translate-me">
+                The rapid growth of packaged food consumption has heightened consumer demand for transparency regarding dietary ingredients, additive safety, and nutritional value. However, modern food labels remain complex and difficult for everyday consumers to decode quickly at the point of sale. NutriScan AI is a dynamic, AI-powered web application that evaluates packaged food items using standardised health indicators — Nutri-Score (A to E) and NOVA Processing Groups (1 to 4) — bridging the gap between raw nutritional data and consumer understanding.
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed translate-me">
+                The platform manages a dynamic catalog of 355 packaged food products with real-time indexing, multi-category filtering and sorting. An interactive AI Specialist evaluates ingredients, highlights dietary allergens, and answers real-time queries against FSSAI guidelines and macro-nutritional targets, with full support for English, Tamil, Hindi, Telugu, Malayalam and Kannada.
+            </p>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">Tech Stack</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-html5 text-2xl text-orange-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">HTML5</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-css3-alt text-2xl text-blue-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">CSS3 / Tailwind</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-js text-2xl text-amber-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Vanilla JS (ES6+)</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-eye text-2xl text-purple-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Tesseract.js OCR</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-barcode text-2xl text-slate-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">ZXing Barcode Reader</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-robot text-2xl text-emerald-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Gemini API Assistant</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-language text-2xl text-rose-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Client-side Translation</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-github text-2xl text-slate-800 dark:text-white"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">GitHub Pages Hosting</div></div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">Classification &amp; Evaluation Methodology</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">Nutrient Classification (per 100g)</h3>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1 translate-me">
+                        <li>🟢 Sugar low ≤5g · 🟡 moderate ≤22.5g · 🔴 high &gt;22.5g</li>
+                        <li>🟢 Sodium low &lt;120mg · 🟡 moderate ≤600mg · 🔴 high &gt;600mg</li>
+                        <li>🟢 Fat low ≤3g · 🟡 moderate ≤17.5g · 🔴 high &gt;17.5g</li>
+                        <li>🟢 Saturated fat low ≤1.5g · 🟡 moderate ≤5g · 🔴 high &gt;5g</li>
+                    </ul>
+                </div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">Regulatory &amp; Toxic Additive Check</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 translate-me">Flags banned/restricted dyes and chemicals under FSSAI &amp; WHO guidance (e.g. Rhodamine B, Metanil Yellow, Potassium Bromate INS 924, Brominated Vegetable Oil) and additives with health advisories (INS 211, INS 621/MSG, E133, E171).</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">Veg / Non-Veg &amp; Allergen Detection</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 translate-me">Automatically detects non-vegetarian markers (e.g. Carmine/E120, animal gelatin, rennet) and flags common allergens — gluten, lactose, nuts, soy, egg, sesame.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">NOVA &amp; Nutri-Score</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 translate-me">Displays processing level (NOVA Group 1–4) and overall front-of-pack health score (Nutri-Score A–E) for every database record, with a rule-based estimate shown for freehand/OCR text that has no database match.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">Regulatory Frameworks Referenced</h2>
+            <div class="overflow-x-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                <table class="w-full text-xs text-left">
+                    <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 uppercase font-bold">
+                        <tr><th class="p-3 translate-me">Authority / Standard</th><th class="p-3 translate-me">Focus Area</th><th class="p-3 translate-me">What NutriScan AI Flags</th></tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                        <tr><td class="p-3 font-semibold">FSSAI</td><td class="p-3 translate-me">India's primary food safety statute</td><td class="p-3 translate-me">Additive limits, allergen labelling, permitted preservatives</td></tr>
+                        <tr><td class="p-3 font-semibold">WHO / Codex Alimentarius</td><td class="p-3 translate-me">Global food safety reference</td><td class="p-3 translate-me">Sugar/sodium intake thresholds, GSFA additive limits for imported items</td></tr>
+                        <tr><td class="p-3 font-semibold">Legal Metrology (Packaged Commodities) Rules, 2011</td><td class="p-3 translate-me">Pricing &amp; packaging declarations</td><td class="p-3 translate-me">Missing net weight, invalid MRP format, missing manufacturer contact</td></tr>
+                        <tr><td class="p-3 font-semibold">BIS (ISI Mark)</td><td class="p-3 translate-me">Water &amp; infant foods quality mark</td><td class="p-3 translate-me">Missing mandatory ISI certification on packaged water / baby food categories</td></tr>
+                        <tr><td class="p-3 font-semibold">AGMARK</td><td class="p-3 translate-me">Oils, honey &amp; spices grading</td><td class="p-3 translate-me">Unverified purity claims on honey, ghee, and spices</td></tr>
+                        <tr><td class="p-3 font-semibold">Ministry of AYUSH</td><td class="p-3 translate-me">Herbal / Ayush Aahar foods</td><td class="p-3 translate-me">Validity of herbal health claims on AYUSH-registered products</td></tr>
+                        <tr><td class="p-3 font-semibold">EFSA / US FDA</td><td class="p-3 translate-me">Global safety cross-check</td><td class="p-3 translate-me">Additives permitted in India but banned/restricted internationally, e.g. Titanium Dioxide (E171)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">System Evaluation Metrics</h2>
+            <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc pl-5 translate-me">
+                <li>OCR Text Accuracy — Character/Word Error Rate on cropped packaging labels</li>
+                <li>Extraction Coverage — percentage of readable nutrition tables correctly parsed</li>
+                <li>Class-Specific Recall (High Risk) — ensures near-zero dangerous false negatives</li>
+                <li>Macro F1-Score — balance across Healthy / Moderate / Unhealthy classes</li>
+                <li>Confusion Matrix — verifies high-risk products are never misclassified as safe</li>
+            </ul>
+        </section>
+    </main>

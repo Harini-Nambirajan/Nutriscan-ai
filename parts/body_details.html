@@ -1,0 +1,35 @@
+    <main class="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 py-8 flex-grow w-full space-y-8">
+        <div class="flex items-center justify-between flex-wrap gap-4">
+            <a href="products.html" class="nav-item page-transition px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full text-xs font-bold text-slate-700 dark:text-slate-200 shadow-sm flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+                <i class="fa-solid fa-arrow-left text-xs"></i> <span class="translate-me">Back to Products</span>
+            </a>
+            <div class="flex items-center gap-3 relative">
+                <div class="relative">
+                    <button onclick="toggleShareSheet()" class="px-4 py-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-full text-xs font-bold text-slate-700 dark:text-slate-200 shadow-sm flex items-center gap-2 hover:bg-slate-50 dark:hover:bg-slate-800 transition">
+                        <i class="fa-solid fa-share-nodes text-xs"></i> <span class="translate-me">Share</span>
+                    </button>
+                    <div id="shareSheet" class="hidden absolute right-0 mt-2 w-64 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl p-3 z-50">
+                        <div class="grid grid-cols-4 gap-2 text-center mb-2">
+                            <a id="shareWhatsapp" href="#" target="_blank" class="flex flex-col items-center gap-1 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800"><span class="w-9 h-9 rounded-full bg-emerald-500 text-white flex items-center justify-center"><i class="fa-brands fa-whatsapp"></i></span><span class="text-[9px] font-semibold text-slate-600 dark:text-slate-300">WhatsApp</span></a>
+                            <a id="shareGmail" href="#" target="_blank" class="flex flex-col items-center gap-1 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800"><span class="w-9 h-9 rounded-full bg-rose-500 text-white flex items-center justify-center"><i class="fa-solid fa-envelope"></i></span><span class="text-[9px] font-semibold text-slate-600 dark:text-slate-300">Gmail</span></a>
+                            <a id="shareSms" href="#" class="flex flex-col items-center gap-1 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800"><span class="w-9 h-9 rounded-full bg-blue-500 text-white flex items-center justify-center"><i class="fa-solid fa-comment-sms"></i></span><span class="text-[9px] font-semibold text-slate-600 dark:text-slate-300">Messages</span></a>
+                            <button onclick="shareViaSystem()" class="flex flex-col items-center gap-1 p-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800"><span class="w-9 h-9 rounded-full bg-slate-500 text-white flex items-center justify-center"><i class="fa-solid fa-bluetooth-b"></i></span><span class="text-[9px] font-semibold text-slate-600 dark:text-slate-300">More</span></button>
+                        </div>
+                        <button onclick="copyProductLink()" class="w-full flex items-center gap-2 px-3 py-2 rounded-xl hover:bg-slate-50 dark:hover:bg-slate-800 text-xs font-semibold text-slate-700 dark:text-slate-200"><i class="fa-regular fa-copy text-slate-400"></i> Copy link</button>
+                    </div>
+                </div>
+                <a href="ai-analyzer.html" onclick="stashProductForAnalyzer()" class="nav-item page-transition px-4 py-2 bg-slate-950 dark:bg-emerald-600 text-white rounded-full text-xs font-bold shadow-md flex items-center gap-2 transition hover:opacity-90">
+                    <i class="fa-solid fa-robot text-xs"></i> <span class="translate-me">Ask AI Specialist</span>
+                </a>
+            </div>
+        </div>
+
+        <div id="detailsContent">
+            <div class="text-center py-24"><i class="fa-solid fa-spinner fa-spin text-3xl text-slate-300"></i></div>
+        </div>
+
+        <div id="similarSection" class="space-y-4 hidden">
+            <h3 class="text-lg font-bold text-slate-900 dark:text-white translate-me">You Might Also Consider</h3>
+            <div id="similarGrid" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-5"></div>
+        </div>
+    </main>

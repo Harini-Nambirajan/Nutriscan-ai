@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en" class="light">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>NutriScan AI - About the Project</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <script>
+        tailwind.config = {
+            darkMode: 'class',
+            theme: { extend: { colors: { brand: { 50:'#ecfdf5',100:'#d1fae5',500:'#10b981',600:'#059669',700:'#047857' } } } }
+        }
+    </script>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="icon" href="C:\nutriscan-ai\assets\img\logo.png" type="image/png">
+    <style>
+        html { font-family: 'Inter', ui-sans-serif, system-ui, sans-serif; }
+        .nutri-a { background-color: #059669; color: white; }
+        .nutri-b { background-color: #10b981; color: white; }
+        .nutri-c { background-color: #f59e0b; color: white; }
+        .nutri-d { background-color: #f97316; color: white; }
+        .nutri-e { background-color: #ef4444; color: white; }
+        .no-scrollbar::-webkit-scrollbar { display: none; }
+        .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+        ::-webkit-scrollbar { width: 8px; height: 8px; }
+        ::-webkit-scrollbar-thumb { background: #cbd5e1; border-radius: 999px; }
+        .dark ::-webkit-scrollbar-thumb { background: #334155; }
+        .nav-pillow {
+            transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1), width 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+            will-change: left, width;
+        }
+    </style>
+</head>
+<body class="bg-[#f8fafc] dark:bg-slate-950 text-slate-800 dark:text-slate-100 font-sans min-h-screen flex flex-col transition-colors duration-300 relative">
+
+    <div class="sticky top-0 z-40 pt-4 px-4 sm:px-6 lg:px-8 max-w-7xl mx-auto w-full">
+        <header class="bg-white/90 dark:bg-slate-900/90 backdrop-blur-md border border-slate-200/80 dark:border-slate-800 rounded-full shadow-lg px-3 sm:px-6 py-2 sm:py-2.5 flex items-center justify-between transition-colors duration-300">
+
+            <a href="C:\nutriscan-ai\home.html" class="nav-item page-transition flex items-center space-x-2.5 text-decoration-none shrink-0">
+                <img src="C:\nutriscan-ai\assets\img\logo.png" alt="NutriScan AI logo" class="w-9 h-9 rounded-full object-cover shadow-inner bg-white">
+                <span class="text-sm sm:text-lg font-bold tracking-tight text-slate-900 dark:text-white whitespace-nowrap">NutriScan <span class="text-emerald-500">AI</span></span>
+            </a>
+
+            <nav class="hidden md:flex relative bg-slate-100 dark:bg-slate-800/80 p-1 rounded-full text-xs font-semibold text-slate-600 dark:text-slate-300">
+                <div class="nav-pillow absolute top-1 bottom-1 bg-white dark:bg-slate-700 rounded-full shadow-md transition-all duration-300 ease-out"></div>
+                <a href="C:\nutriscan-ai\home.html" class="nav-item page-transition relative z-10 px-4 py-2 rounded-full flex items-center gap-2 transition-colors duration-200"><i class="fa-solid fa-compass text-xs"></i> <span class="translate-me">Home</span></a>
+                <a href="C:\nutriscan-ai\products.html" class="nav-item page-transition relative z-10 px-4 py-2 rounded-full flex items-center gap-2 transition-colors duration-200"><i class="fa-solid fa-border-all text-xs"></i> <span class="translate-me">Products</span></a>
+                <a href="C:\nutriscan-ai\ai-analyzer.html" class="nav-item page-transition relative z-10 px-4 py-2 rounded-full flex items-center gap-2 transition-colors duration-200"><i class="fa-solid fa-wand-magic-sparkles text-xs"></i> <span class="translate-me">AI Analyzer</span></a>
+                <a href="C:\nutriscan-ai\about.html" class="nav-item page-transition relative z-10 px-4 py-2 rounded-full flex items-center gap-2 transition-colors duration-200"><i class="fa-regular fa-circle-question text-xs"></i> <span class="translate-me">About</span></a>
+                <a href="C:\nutriscan-ai\developers.html" class="nav-item page-transition relative z-10 px-4 py-2 rounded-full flex items-center gap-2 transition-colors duration-200"><i class="fa-regular fa-user text-xs"></i> <span class="translate-me">Developers</span></a>
+            </nav>
+
+            <div class="flex items-center space-x-1.5 sm:space-x-3">
+                <div class="relative lang-dropdown-wrapper">
+                    <button onclick="toggleLangDropdown()" class="flex items-center gap-1.5 px-2.5 sm:px-3 py-1.5 bg-slate-100 dark:bg-slate-800 rounded-full text-xs font-medium text-slate-700 dark:text-slate-200 hover:bg-slate-200 dark:hover:bg-slate-700 transition">
+                        <i class="fa-solid fa-globe text-emerald-500"></i>
+                        <span class="hidden sm:inline current-lang-code">GB</span>
+                        <span class="hidden sm:inline current-lang-name">English</span>
+                        <i class="fa-solid fa-chevron-down text-[10px] text-slate-400"></i>
+                    </button>
+                    <div class="lang-menu hidden absolute right-0 mt-2 w-52 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-xl py-2 z-50 text-xs">
+                        <div class="px-3 py-1.5 text-[10px] font-bold text-slate-400 uppercase tracking-wider border-b border-slate-100 dark:border-slate-800">Select Language</div>
+                        <button onclick="changeLanguage('en')" class="w-full text-left px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200">English</button>
+                        <button onclick="changeLanguage('ta')" class="w-full text-left px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200">தமிழ் <span class="text-slate-400 font-normal">(TAMIL)</span></button>
+                        <button onclick="changeLanguage('hi')" class="w-full text-left px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200">हिंदी <span class="text-slate-400 font-normal">(HINDI)</span></button>
+                        <button onclick="changeLanguage('te')" class="w-full text-left px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200">తెలుగు <span class="text-slate-400 font-normal">(TELUGU)</span></button>
+                        <button onclick="changeLanguage('ml')" class="w-full text-left px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200">മലയാളം <span class="text-slate-400 font-normal">(MALAYALAM)</span></button>
+                        <button onclick="changeLanguage('kn')" class="w-full text-left px-4 py-2 hover:bg-slate-50 dark:hover:bg-slate-800 font-semibold text-slate-700 dark:text-slate-200">ಕನ್ನಡ <span class="text-slate-400 font-normal">(KANNADA)</span></button>
+                    </div>
+                </div>
+
+                <button onclick="toggleDarkMode()" aria-label="Toggle Theme" class="w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-amber-400 hover:bg-slate-200 dark:hover:bg-slate-700 transition shrink-0">
+                    <i class="theme-icon fa-regular fa-moon"></i>
+                </button>
+
+                <a href="C:\nutriscan-ai\ai-analyzer.html" class="nav-item page-transition hidden sm:flex bg-slate-950 hover:bg-black dark:bg-emerald-600 dark:hover:bg-emerald-500 text-white text-xs font-semibold px-4 py-2 rounded-full items-center gap-2 shadow-md transition">
+                    <i class="fa-solid fa-wand-magic-sparkles text-emerald-400 dark:text-emerald-100"></i> <span class="translate-me">Scan Food</span>
+                </a>
+
+                <button onclick="toggleMobileMenu()" class="md:hidden w-9 h-9 rounded-full bg-slate-100 dark:bg-slate-800 flex items-center justify-center text-slate-600 dark:text-slate-300 shrink-0">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+            </div>
+        </header>
+
+        <div id="mobileMenu" class="hidden md:hidden mt-2 bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-3xl shadow-lg p-3 space-y-1 text-sm font-semibold text-slate-700 dark:text-slate-200">
+            <a href="C:\nutriscan-ai\home.html" class="nav-item page-transition flex items-center gap-3 px-4 py-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800"><i class="fa-solid fa-compass text-emerald-500 w-4"></i> <span class="translate-me">Home</span></a>
+            <a href="C:\nutriscan-ai\products.html" class="nav-item page-transition flex items-center gap-3 px-4 py-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800"><i class="fa-solid fa-border-all text-emerald-500 w-4"></i> <span class="translate-me">Products</span></a>
+            <a href="C:\nutriscan-ai\ai-analyzer.html" class="nav-item page-transition flex items-center gap-3 px-4 py-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800"><i class="fa-solid fa-wand-magic-sparkles text-emerald-500 w-4"></i> <span class="translate-me">AI Analyzer</span></a>
+            <a href="C:\nutriscan-ai\about.html" class="nav-item page-transition flex items-center gap-3 px-4 py-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800"><i class="fa-regular fa-circle-question text-emerald-500 w-4"></i> <span class="translate-me">About</span></a>
+            <a href="C:\nutriscan-ai\developers.html" class="nav-item page-transition flex items-center gap-3 px-4 py-2.5 rounded-2xl hover:bg-slate-50 dark:hover:bg-slate-800"><i class="fa-regular fa-user text-emerald-500 w-4"></i> <span class="translate-me">Developers</span></a>
+        </div>
+    </div>
+
+    <main class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 py-10 flex-grow w-full space-y-12">
+        <section class="space-y-4">
+            <span class="text-xs font-bold text-emerald-500 uppercase tracking-widest translate-me">ABOUT THE PROJECT</span>
+            <h1 class="text-3xl sm:text-4xl font-black text-slate-900 dark:text-white translate-me">Multilingual Food Label Parsing, Banned Dye Detection &amp; AI Chat Assistant</h1>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed translate-me">
+                The rapid growth of packaged food consumption has heightened consumer demand for transparency regarding dietary ingredients, additive safety, and nutritional value. However, modern food labels remain complex and difficult for everyday consumers to decode quickly at the point of sale. NutriScan AI is a dynamic, AI-powered web application that evaluates packaged food items using standardised health indicators — Nutri-Score (A to E) and NOVA Processing Groups (1 to 4) — bridging the gap between raw nutritional data and consumer understanding.
+            </p>
+            <p class="text-sm sm:text-base text-slate-600 dark:text-slate-400 leading-relaxed translate-me">
+                The platform manages a dynamic catalog of 355 packaged food products with real-time indexing, multi-category filtering and sorting. An interactive AI Specialist evaluates ingredients, highlights dietary allergens, and answers real-time queries against FSSAI guidelines and macro-nutritional targets, with full support for English, Tamil, Hindi, Telugu, Malayalam and Kannada.
+            </p>
+        </section>
+
+        <!-- 4-Stage Processing Workflow Section -->
+        <section class="space-y-6">
+            <div class="text-center sm:text-left space-y-1">
+                <span class="text-xs font-bold text-emerald-500 uppercase tracking-widest translate-me">SYSTEM METHODOLOGY</span>
+                <h2 class="text-2xl sm:text-3xl font-black text-slate-900 dark:text-white translate-me">4-Stage Processing Workflow</h2>
+            </div>
+            <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+                <!-- Stage 01 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col justify-between space-y-4 hover:shadow-2xl transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">01</span>
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
+                            <i class="fa-solid fa-barcode text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white translate-me">Data Acquisition &amp; OCR Parsing</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed translate-me">Packaged food ingredients, nutrient lists, and net weight details are scraped or scanned into structured JSON schemas.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 02 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col justify-between space-y-4 hover:shadow-2xl transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">02</span>
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
+                            <i class="fa-solid fa-calculator text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white translate-me">Nutri-Score FSA Algorithm Calculation</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed translate-me">Negative Points (Energy, Sugar, Saturated Fat, Sodium) are weighed against Positive Points (Fiber, Protein, Fruits/Veggies) to produce standard A-E grades.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 03 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col justify-between space-y-4 hover:shadow-2xl transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">03</span>
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
+                            <i class="fa-solid fa-microchip text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white translate-me">NOVA Ultra-Processed Classification</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed translate-me">Products are assigned to NOVA Groups 1 through 4 based on industrial processing level, E-number additives, and emulsifier concentration.</p>
+                    </div>
+                </div>
+
+                <!-- Stage 04 -->
+                <div class="bg-white dark:bg-slate-900 border border-slate-100 dark:border-slate-800 rounded-3xl p-6 shadow-xl flex flex-col justify-between space-y-4 hover:shadow-2xl transition duration-300">
+                    <div class="flex items-center justify-between">
+                        <span class="text-lg font-black text-emerald-600 dark:text-emerald-400">04</span>
+                        <div class="w-10 h-10 rounded-2xl bg-emerald-50 dark:bg-emerald-950/50 flex items-center justify-center text-emerald-600 dark:text-emerald-400 shadow-sm">
+                            <i class="fa-solid fa-desktop text-sm"></i>
+                        </div>
+                    </div>
+                    <div class="space-y-2">
+                        <h3 class="text-base font-bold text-slate-900 dark:text-white translate-me">Client-Side Real-Time Visualization</h3>
+                        <p class="text-xs text-slate-600 dark:text-slate-400 leading-relaxed translate-me">Clean Apple/Linear inspired glassmorphic dashboard renders interactive macro charts, health warnings, and smart alternatives.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">Tech Stack</h2>
+            <div class="grid grid-cols-2 sm:grid-cols-4 gap-4">
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-html5 text-2xl text-orange-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">HTML5</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-css3-alt text-2xl text-blue-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">CSS3 / Tailwind</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-js text-2xl text-amber-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Vanilla JS (ES6+)</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-eye text-2xl text-purple-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Tesseract.js OCR</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-barcode text-2xl text-slate-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">ZXing Barcode Reader</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-robot text-2xl text-emerald-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Gemini API Assistant</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-solid fa-language text-2xl text-rose-500"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">Client-side Translation</div></div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-4 text-center shadow-sm"><i class="fa-brands fa-github text-2xl text-slate-800 dark:text-white"></i><div class="text-xs font-bold mt-2 text-slate-700 dark:text-slate-200">GitHub Pages Hosting</div></div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">Classification &amp; Evaluation Methodology</h2>
+            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">Nutrient Classification (per 100g)</h3>
+                    <ul class="text-xs text-slate-600 dark:text-slate-400 space-y-1 translate-me">
+                        <li>🟢 Sugar low ≤5g · 🟡 moderate ≤22.5g · 🔴 high &gt;22.5g</li>
+                        <li>🟢 Sodium low &lt;120mg · 🟡 moderate ≤600mg · 🔴 high &gt;600mg</li>
+                        <li>🟢 Fat low ≤3g · 🟡 moderate ≤17.5g · 🔴 high &gt;17.5g</li>
+                        <li>🟢 Saturated fat low ≤1.5g · 🟡 moderate ≤5g · 🔴 high &gt;5g</li>
+                    </ul>
+                </div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">Regulatory &amp; Toxic Additive Check</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 translate-me">Flags banned/restricted dyes and chemicals under FSSAI &amp; WHO guidance (e.g. Rhodamine B, Metanil Yellow, Potassium Bromate INS 924, Brominated Vegetable Oil) and additives with health advisories (INS 211, INS 621/MSG, E133, E171).</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">Veg / Non-Veg &amp; Allergen Detection</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 translate-me">Automatically detects non-vegetarian markers (e.g. Carmine/E120, animal gelatin, rennet) and flags common allergens — gluten, lactose, nuts, soy, egg, sesame.</p>
+                </div>
+                <div class="bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl p-5 shadow-sm">
+                    <h3 class="text-sm font-bold text-slate-900 dark:text-white mb-2 translate-me">NOVA &amp; Nutri-Score</h3>
+                    <p class="text-xs text-slate-600 dark:text-slate-400 translate-me">Displays processing level (NOVA Group 1–4) and overall front-of-pack health score (Nutri-Score A–E) for every database record, with a rule-based estimate shown for freehand/OCR text that has no database match.</p>
+                </div>
+            </div>
+        </section>
+
+        <section class="space-y-4">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">Regulatory Frameworks Referenced</h2>
+            <div class="overflow-x-auto bg-white dark:bg-slate-900 border border-slate-200 dark:border-slate-800 rounded-2xl shadow-sm">
+                <table class="w-full text-xs text-left">
+                    <thead class="bg-slate-50 dark:bg-slate-800 text-slate-500 dark:text-slate-400 uppercase font-bold">
+                        <tr><th class="p-3 translate-me">Authority / Standard</th><th class="p-3 translate-me">Focus Area</th><th class="p-3 translate-me">What NutriScan AI Flags</th></tr>
+                    </thead>
+                    <tbody class="divide-y divide-slate-100 dark:divide-slate-800 text-slate-700 dark:text-slate-300">
+                        <tr><td class="p-3 font-semibold">FSSAI</td><td class="p-3 translate-me">India's primary food safety statute</td><td class="p-3 translate-me">Additive limits, allergen labelling, permitted preservatives</td></tr>
+                        <tr><td class="p-3 font-semibold">WHO / Codex Alimentarius</td><td class="p-3 translate-me">Global food safety reference</td><td class="p-3 translate-me">Sugar/sodium intake thresholds, GSFA additive limits for imported items</td></tr>
+                        <tr><td class="p-3 font-semibold">Legal Metrology (Packaged Commodities) Rules, 2011</td><td class="p-3 translate-me">Pricing &amp; packaging declarations</td><td class="p-3 translate-me">Missing net weight, invalid MRP format, missing manufacturer contact</td></tr>
+                        <tr><td class="p-3 font-semibold">BIS (ISI Mark)</td><td class="p-3 translate-me">Water &amp; infant foods quality mark</td><td class="p-3 translate-me">Missing mandatory ISI certification on packaged water / baby food categories</td></tr>
+                        <tr><td class="p-3 font-semibold">AGMARK</td><td class="p-3 translate-me">Oils, honey &amp; spices grading</td><td class="p-3 translate-me">Unverified purity claims on honey, ghee, and spices</td></tr>
+                        <tr><td class="p-3 font-semibold">Ministry of AYUSH</td><td class="p-3 translate-me">Herbal / Ayush Aahar foods</td><td class="p-3 translate-me">Validity of herbal health claims on AYUSH-registered products</td></tr>
+                        <tr><td class="p-3 font-semibold">EFSA / US FDA</td><td class="p-3 translate-me">Global safety cross-check</td><td class="p-3 translate-me">Additives permitted in India but banned/restricted internationally, e.g. Titanium Dioxide (E171)</td></tr>
+                    </tbody>
+                </table>
+            </div>
+        </section>
+
+        <section class="space-y-3">
+            <h2 class="text-xl font-bold text-slate-900 dark:text-white translate-me">System Evaluation Metrics</h2>
+            <ul class="text-sm text-slate-600 dark:text-slate-400 space-y-2 list-disc pl-5 translate-me">
+                <li>OCR Text Accuracy — Character/Word Error Rate on cropped packaging labels</li>
+                <li>Extraction Coverage — percentage of readable nutrition tables correctly parsed</li>
+                <li>Class-Specific Recall (High Risk) — ensures near-zero dangerous false negatives</li>
+                <li>Macro F1-Score — balance across Healthy / Moderate / Unhealthy classes</li>
+                <li>Confusion Matrix — verifies high-risk products are never misclassified as safe</li>
+            </ul>
+        </section>
+    </main>
+
+    <footer class="bg-white dark:bg-slate-900 border-t border-slate-200 dark:border-slate-800 py-8 mt-auto transition-colors duration-300">
+        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col sm:flex-row items-center justify-between gap-4">
+            <a href="C:\nutriscan-ai\home.html" class="nav-item page-transition flex items-center gap-2.5">
+                <img src="C:\nutriscan-ai\assets\img\logo.png" alt="NutriScan AI logo" class="w-8 h-8 rounded-full object-cover bg-white">
+                <span class="text-sm font-bold text-slate-900 dark:text-white">NutriScan <span class="text-emerald-500">AI</span></span>
+            </a>
+            <p class="text-xs text-slate-500 dark:text-slate-400 text-center translate-me">&copy; 2026 NutriScan AI. Engineering project — EC23721 AI &amp; ML for Electronic Engineering. Not a substitute for professional medical or dietary advice.</p>
+            <div class="flex items-center gap-4 text-slate-400">
+                <a href="C:\nutriscan-ai\about.html" class="nav-item page-transition hover:text-emerald-500 text-xs font-semibold translate-me">About</a>
+                <a href="C:\nutriscan-ai\developers.html" class="nav-item page-transition hover:text-emerald-500 text-xs font-semibold translate-me">Developers</a>
+            </div>
+        </div>
+    </footer>
+
+    <script src="C:\nutriscan-ai\assets\js\config.js"></script>
+    <script src="C:\nutriscan-ai\assets\js\i18n.js"></script>
+    <script src="C:\nutriscan-ai\assets\js\common.js"></script>
+    <script src="C:\nutriscan-ai\assets\js\products-store.js"></script>
+    <script src="C:\nutriscan-ai\assets\js\analysis-render.js"></script>
+    <script src="C:\nutriscan-ai\assets\js\faq-store.js"></script>
+    <script src="C:\nutriscan-ai\assets\js\chatbot-hybrid.js"></script>
+</body>
+</html>
