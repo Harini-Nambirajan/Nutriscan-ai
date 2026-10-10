@@ -62,7 +62,7 @@ The key you originally pasted in the project brief (`AQ.Ab8RN6...`) is **not** a
 home.html, products.html, ai-analyzer.html, about.html, developers.html, details.html
 products.json                  # 355-product database
 assets/img/logo.png            # site logo (from Logo_Nutriscan.png)
-assets/img/dev-gokulnath.jpeg
+assets/img/
 assets/js/config.js            # Gemini key + FAQ + banned-additive/allergen reference data
 assets/js/i18n.js               # translation engine
 assets/js/common.js             # theme, nav, page transitions, chat widget
